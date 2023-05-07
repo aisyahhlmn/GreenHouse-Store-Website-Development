@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Customer Registration</title>
+<style>
+body{
+  background-image:url("https://i.ibb.co/QFD1D17/bglogin2.jpg") ;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+h3{
+  font-family: 'Times New Roman', Times, serif; 
+  font-size: 25pt;         
+  font-style: normal; 
+  font-weight: bold; 
+  color:white;
+  text-align: center; 
+  text-decoration: underline
+}
+
+table{
+  font-family: Calibri; 
+  color:white; 
+  font-size: 11pt; 
+  font-style: normal;
+  font-weight: bold;
+  background-color: #5f9168; 
+  border-collapse: collapse; 
+  border: 2px solid #1e8831
+}
+table.inner{
+  border: 0px
+}
+/***button setting ****/
+a:link, a:visited {
+  background-color: white;
+  color: black;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover, a:active {
+  background-color: #1e8831;
+}
+</style>
+</head>
+<body>
+<br>
+
+
+
+
+<form action="registration" method="post">
+  {% csrf_token %}
+
+  <table align="center" cellpadding = "10">
+  
+  <center><img src="https://i.ibb.co/Q99L9CD/login-logo.jpg" alt="Logo" width="500px" size="500px" ></center>
+  <h3>CUSTOMER REGISTRATION FORM</h3>
+  <!----- First Name ---------------------------------------------------------->
+  <tr>
+    
+  <td>NAME :</td>
+  <td><input type="text" name="Name"  placeholder=" eg: John Doe"/>
+  (Characters a-z and A-Z)
+
+  </td>
+  </tr>
+  
+  
+  <!----- Date Of Birth -------------------------------------------------------->
+
+  <tr>
+  <td>DATE OF BIRTH :</td>
+  <td><input type="text" name="Birth_Date" maxlength="30" placeholder=" eg: 2002-02-09"/>
+
+  </td>
+  </tr>
+  
+  <!----- Email Id ---------------------------------------------------------->
+  <tr>
+  <td>EMAIL :</td>
+  <td><input type="text" name="Email_Id" maxlength="100" placeholder=" johndoe123@gmail.com"/></td>
+  </tr>
+  
+  <!----- Mobile Number ---------------------------------------------------------->
+  <tr>
+  <td>MOBILE NUMBER :</td>
+  <td>
+  <input type="text" name="Mobile_Number" maxlength="16" placeholder=" eg: 012-3456789"/>
+
+  </td>
+  </tr>
+  
+  <!----- Gender ----------------------------------------------------------->
+  <tr>
+  <td>GENDER :</td>
+  <td>
+  <input type="text" name="Gender" maxlength="10" placeholder=" Female/Male" />
+
+  </td>
+  </tr>
+  
+  <!----- Address ---------------------------------------------------------->
+  <tr>
+  <td>ADDRESS :<br /><br /><br /></td>
+  <td><textarea name="Address" rows="4" cols="30" placeholder="eg: No.72 Jalan 8/5, Seksyen 8 , Bandar Baru Bangi, 43650, Selangor, Malaysia."></textarea></td>
+  </tr>
+  
+  <!----- City ---------------------------------------------------------->
+  <tr>
+  <td>CITY :</td>
+  <td><input type="text" name="City" maxlength="30" placeholder=" eg: Kuala Lumpur" />
+
+  </td>
+  </tr>
+  
+  <!----- Pin Code ---------------------------------------------------------->
+  <tr>
+  <td>POSCODE :</td>
+  <td><input type="text" name="Pin_Code" maxlength="6" placeholder=" eg: 43650"/>
+
+  </td>
+  </tr>
+  
+  <!----- State ---------------------------------------------------------->
+  <tr>
+  <td>STATE :</td>
+  <td><input type="text" name="State" maxlength="30" placeholder=" eg: Selangor" />
+
+  </td>
+  </tr>
+  
+  <!----- Country ---------------------------------------------------------->
+  <tr>
+  <td>COUNTRY :</td>
+  <td><input type="text" name="Country"  placeholder=" eg: Malaysia" /></td>
+  </tr>
+  
+  <!----- Password ---------------------------------------------------------->
+  <tr>
+    <td>PASSWORD:</td>
+    <td><input type="text" name="password"  /></td>
+    </tr>
+
+  <!----- Re-type Password ---------------------------------------------------------->
+  <tr>
+    <td>CONFIRM PASSWORD:</td>
+    <td><input type="text" name="retype_password"  /></td>
+    </tr>
+  {{message}}
+  <!----- Submit and Reset ------------------------------------------------->
+  <br>
+  <br>
+  <tr>
+  <td colspan="2" align="center">
+
+  <!---<button onclick="myFunction()">Submit</button>--->
+  <!--<button onclick="myResetbutton()">Reset</button>-->
+
+  <button type="submit" value="Submit">Submit</button>
+  </form>
+  <br>
+  <a href="{%url 'login' %}">GO TO LOGIN</a>
+
+</td>
+</tr>
+</table>
+<br>
+<!--<script>
+	function myResetbutton() {
+	  document.getElementById("myForm").reset();
+	}
+
+  function myFunction() {
+  alert("Your registration submitted!");
+}
+</script>-->
+
+</body>
+</html>

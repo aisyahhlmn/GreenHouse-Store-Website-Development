@@ -1,0 +1,542 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
+    <link rel="stylesheet" href="style.css" />
+    <title>Checkout Form</title>
+    <!--==Stylesheet=============================-->
+  <link rel="stylesheet" type="text/css" href="css/style.css"/>
+  <!--==Fav-icon===============================-->
+  <link rel="shortcut icon" href="images/fav-icon.png"/>
+  <!--==Using-Font-Awesome=====================-->
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+  <!--==Import-Font-Family======================-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<style>
+  *{
+    font-family: poppins;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: poppins;
+}
+ 
+::selection{
+color:#ffffff;
+background-color:#40aa54;}
+
+/***Navigations bar setting*******************/
+:root {
+  --color-primary: #40aa54;
+  --color-white: #141d28;
+  --color-black: white;
+  --color-black-1: #212b38;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+ 
+}
+
+.logo {
+  color: var(--color-white);
+  font-size: 30px;
+}
+
+.logo span {
+  color: var(--color-primary);
+}
+
+.menu-bar {
+  background-color: var(--color-black);
+  height: 80px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5%;
+
+  position: relative;
+}
+
+.menu-bar ul {
+  list-style: none;
+  display: flex;
+}
+
+.menu-bar ul li {
+  /* width: 120px; */
+  padding: 10px 30px;
+  /* text-align: center; */
+
+  position: relative;
+}
+
+.menu-bar ul li a {
+  font-size: 20px;
+  color: var(--color-white);
+  text-decoration: none;
+
+  transition: all 0.3s;
+}
+
+.menu-bar ul li a:hover {
+  color: var(--color-primary);
+}
+
+.fas {
+  float: right;
+  margin-left: 10px;
+  padding-top: 3px;
+}
+
+/* dropdown menu style */
+.dropdown-menu {
+  display: none;
+  z-index: 1;
+}
+
+.menu-bar ul li:hover .dropdown-menu {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background-color: var(--color-black);
+}
+
+.menu-bar ul li:hover .dropdown-menu ul {
+  display: block;
+  margin: 10px;
+}
+
+.menu-bar ul li:hover .dropdown-menu ul li {
+  width: 150px;
+  padding: 10px;
+}
+
+.dropdown-menu-1 {
+  display: none;
+  z-index: 1;
+}
+
+.dropdown-menu ul li:hover .dropdown-menu-1 {
+  display: block;
+  position: absolute;
+  left: 150px;
+  top: 0;
+  background-color: var(--color-black);
+}
+
+.hero {
+  height: calc(19vh - 80px);
+  background-image: url(./bg.jpg);
+  background-position: center;
+}
+.active{
+    color: #40aa54;
+    transition: all ease 0.3s;
+}
+
+/*==footer============================*/
+footer{
+    background-color: #1b1d1f;
+    padding: 50px 20px;
+    border-top: 5px solid #4eb060;
+}
+.footer-container{
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+.footer-logo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.footer-logo a{
+    color: #ffffff;
+    font-size: 1.4rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+.footer-logo a span{
+    color: #4eb060;
+}
+.footer-social{
+    display: flex;
+    margin-top: 10px;
+}
+.footer-social a{
+    width:40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    border: 1px solid #ffffff15;
+    font-size: 0.9rem;
+    margin: 0px 5px;
+    transition: all ease 0.3s;
+}
+.footer-social a:hover{
+    background-color: #4eb060;
+    transition: all ease 0.3s;
+}
+.footer-links strong{
+    color: #ffffff;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+.footer-links ul{
+    margin-top: 10px;
+}
+.footer-links ul li a{
+    color: #ffffff;
+    opacity: 0.5;
+    margin: 4px 0px;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    transition: all ease 0.3s;
+}
+.footer-links li a:hover{
+    opacity: 1;
+    transition: all ease 0.3s;
+}
+/********CSS FOR CHECKOUT FORM*************/
+body {
+  font-family: Arial;
+  font-size: 17px;
+  padding: 8px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  margin: 0 60px;
+}
+
+.col-25 {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+}
+
+.col-50 {
+  -ms-flex: 50%; /* IE10 */
+  flex: 50%;
+}
+
+.col-75 {
+  -ms-flex: 75%; /* IE10 */
+  flex: 75%;
+}
+
+.col-25,
+.col-50,
+.col-75 {
+  padding: 0 16px;
+}
+
+.container {
+  background-color: #f2f2f2;
+  padding: 5px 20px 15px 20px;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+}
+
+input[type=text] {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+label {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.icon-container {
+  margin-bottom: 20px;
+  padding: 7px 0;
+  font-size: 24px;
+}
+
+.btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  width: 100%;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
+
+a {
+  color: #2196F3;
+}
+
+hr {
+  border: 1px solid lightgrey;
+}
+
+span.price {
+  float: right;
+  color: grey;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (also change the direction - make the "cart" column go on top) */
+@media (max-width: 800px) {
+  .row {
+    flex-direction: column-reverse;
+  }
+  .col-25 {
+    margin-bottom: 20px;
+  }
+}
+/********CSS FOR CHECKOUT FORM END*************/
+ 
+/***********Navigations bar setting END***********************/
+
+</style>
+</head>
+<body>
+  <br>
+
+  <div class="menu-bar">
+    <h1 class="logo"><span>Green</span>House.</h1>
+    <ul>
+      <li><a href="{% url 'home' %}"class="active">🏠Home</a></li>
+
+      <li><a >👩‍🌾Gardening<i class="fas fa-caret-down"></i></a>
+          <div class="dropdown-menu">
+              <ul>
+                <li>
+                  <a href="{% url 'Product1' %}">Gardening Plants</i></a>
+                  <div class="dropdown-menu-1">
+                    <ul>
+                    </ul>
+                  </div>
+                </li>
+                <li>
+                  <a href="{% url 'Product2' %}">Gardening Tools</a>
+                  <div class="dropdown-menu-1">
+                    <ul>
+                     
+                    </ul>
+                  </div>
+                </li>
+                <!--<li><a href="#">FAQ</a></li>--->
+              </ul>
+            </div>
+            <li><a >🍴Kithcenware<i class="fas fa-caret-down"></i></a>
+              <div class="dropdown-menu">
+                  <ul>
+                    <li>
+                      <a href="{% url 'Product3' %}">Kitchen Essentials</a>
+                      <div class="dropdown-menu-1">
+                        <ul>
+                         
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <a href="{% url 'Product4' %}">Kithcen Textiles</a>
+                      <div class="dropdown-menu-1">
+                        <ul>
+                         
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <a href="{% url 'Product5' %}">Tableware</a>
+                      
+                      <div class="dropdown-menu-1">
+                        <ul>
+                      
+                        </ul>
+                      </div>
+                    </li>
+                    
+                  </ul>
+                </div>
+                <li><a href="{% url 'userprofile' %}">👤Profile</a></li>
+                
+      </li>
+      </li>
+      <li><a href="{% url 'checkoutform' %}">🛒MyCart</a></li>
+    </ul>
+  </div>
+
+  <div class="hero">
+    &nbsp;
+  </div>
+
+  
+  <!-----------------------------------Language Setting (start)----------------------------->
+
+<div class="topnav">
+  <div class="translate">
+    <div id="google_translate_element"></div>
+  <script> 
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'en'
+    }, 'google_translate_element');
+  }
+  </script>
+  <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+     </div>
+    </div> 
+
+<!-----------------------------------Language Setting (end)----------------------------->
+<!--------------------------------FORM CHECKOUT START------------------------------------------------------>
+<br>
+<br>
+<center><h1>════════════════ CHECKOUT FORM ═════════════════</h1></center>
+<center><p>Please key-in the information below for delivery purpose</p></center>
+<br>
+<br>
+<div class="row">
+  <div class="col-75">
+    <div class="container">
+      <form action="@">
+      
+        <div class="row">
+          <div class="col-50">
+            <br>
+            <h3>🚚 DELIVERY ADDRESS 🚚</h3>
+            <br>
+            <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="John M. Doe">
+            <label for="email"><i class="fa fa-envelope"></i> Email</label>
+            <input type="text" id="email" name="email" placeholder="john@example.com">
+            <label for="adr"><i class="fa fa-address-card-o"></i>Phone Number</label>
+            <input type="text" id="adr" name="address" placeholder="012-3456789">
+            <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+            <input type="text" id="email" name="email" placeholder="john@example.com">
+            <label for="city"><i class="fa fa-institution"></i> City</label>
+            <input type="text" id="city" name="city" placeholder="Bandar Baru Bangi">
+
+            <div class="row">
+              <div class="col-50">
+                <label for="state">State</label>
+                <input type="text" id="state" name="state" placeholder="Selangor">
+              </div>
+              <div class="col-50">
+                <label for="Poscode">Poscode</label>
+                <input type="text" id="zip" name="zip" placeholder="43650">
+              </div>
+            </div>
+          </div>
+
+          <div class="col-50">
+            <br>
+
+            <div class="col-25">
+              <div class="container">
+                <br>
+                <h4>💸 DELIVERY METHOD 💸<span class="price" style="color:black"><i ></i> <b></b></span></h4>
+                <br>
+              
+                <hr>
+                <br>
+                <p> ➊ Cash on Delivery (COD) <span class="price" style="color:black"><b></b></span></p>
+                <br>
+                <p> ➋ Self Pickup <span class="price" style="color:black"><b></b></span></p>
+                <br>
+                <label for="fname"><i></i>Selected Delivery Method:</label>
+                <input type="text" id="fname" name="firstname" placeholder=" 1 @ 2">
+              </div>
+            </div>
+          </div>
+        </div>
+        <a href="{% url 'popup' %}"><input type="submit" value="CONFIRM PLACE ORDER" class="btn"></a>
+      </form>
+    </div>
+  </div>
+  
+</div>
+<br>
+<br>
+
+
+  <!--==Footer=============================================-->
+  <footer>
+    <div class="footer-container">
+        <!--logo-container------>
+        <div class="footer-logo">
+            <a href="#"><span>Green</span>House.</a>
+            <!--social----->
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+        <!--links------------------------->
+    <div class="footer-links">
+        <strong>Product</strong>
+        <ul>
+            <li><a href="#">Kitchenware</a></li>
+            <li><a href="#">Tableware</a></li>
+            <li><a href="#">Gardening Plants</a></li>
+            <li><a href="#">Gardening Tools</a></li>
+        </ul>
+    </div>
+    <!--links------------------------->
+    <div class="footer-links">
+        <strong>Popular</strong>
+        <ul>
+            <li><a href="#">Succulent</a></li>
+            <li><a href="#">Trowel</a></li>
+            <li><a href="#">Saucepan</a></li>
+            <li><a href="#">Cutlery Set</a></li>
+        </ul>
+    </div>
+    <!--links-------------------------->
+    <div class="footer-links">
+        <strong>Contact Us!</strong>
+        <ul>
+            <li><a href="#">Phone : 03-34567890</a></li>
+            <li><a href="#">Email : greenhouseOfficial@gmail.com</a></li>
+        </ul>
+    </div>
+    </div>
+</footer>
